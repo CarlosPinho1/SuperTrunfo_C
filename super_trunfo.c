@@ -32,8 +32,8 @@ int main() {
 
     printf("===== SUPER TRUNFO =====\n\n");
     printf("Escolha o desafio:\n");
-    printf("1 - Comparacao de um atributo (if e if-else)\n");
-    printf("2 - Comparacao multipla com menus e operadores logicos (if-else if + switch)\n");
+    printf("1 - Comparar um atributo (if e if-else)\n");
+    printf("2 - Comparacao com menus e decisao aninhada\n");
     printf("3 - Comparacao de dois atributos com operador ternario\n");
     printf("Opcao: ");
     scanf("%d", &modo);
@@ -62,7 +62,6 @@ int main() {
         else
             printf("\nEmpate!\n");
     }
-
     else if (modo == 2) {
         printf("\nEscolha o atributo para comparar (1, 2 ou 3): ");
         scanf("%d", &escolha1);
@@ -74,30 +73,27 @@ int main() {
                 printf("\n%s venceu na forca!\n", carta2.nome);
             else
                 printf("\nEmpate na forca!\n");
-        } else if (escolha1 == 2) {
+        }
+        else if (escolha1 == 2) {
             if (carta1.velocidade > carta2.velocidade)
                 printf("\n%s venceu na velocidade!\n", carta1.nome);
             else if (carta2.velocidade > carta1.velocidade)
                 printf("\n%s venceu na velocidade!\n", carta2.nome);
             else
                 printf("\nEmpate na velocidade!\n");
-        } else if (escolha1 == 3) {
+        }
+        else if (escolha1 == 3) {
             if (carta1.inteligencia > carta2.inteligencia)
                 printf("\n%s venceu na inteligencia!\n", carta1.nome);
             else if (carta2.inteligencia > carta1.inteligencia)
                 printf("\n%s venceu na inteligencia!\n", carta2.nome);
             else
                 printf("\nEmpate na inteligencia!\n");
-        } else {
+        }
+        else {
             printf("\nOpcao invalida!\n");
         }
-
-        if ((carta1.forca > carta2.forca) && (carta1.velocidade > carta2.velocidade))
-            printf("\n%s e superior em forca e velocidade!\n", carta1.nome);
-        else if ((carta2.forca > carta1.forca) && (carta2.velocidade > carta1.velocidade))
-            printf("\n%s e superior em forca e velocidade!\n", carta2.nome);
     }
-
     else if (modo == 3) {
         printf("\nEscolha o primeiro atributo: ");
         scanf("%d", &escolha1);
@@ -114,7 +110,6 @@ int main() {
         (total2 > total1) ? printf("\n%s venceu!\n", carta2.nome) :
                             printf("\nEmpate!\n");
     }
-
     else {
         printf("\nOpcao invalida!\n");
     }
@@ -122,3 +117,4 @@ int main() {
     printf("\n===== Fim do Jogo =====\n");
     return 0;
 }
+
